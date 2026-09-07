@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050810">
+  <title>StarkAGI — Building Native Digital Life</title>
+  <meta name="description" content="StarkAGI is a local-first research project building a digital being from first principles. Founder V0 is the first frozen neural baseline; M8 targets persistent working memory.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="ambient" aria-hidden="true"><span></span><span></span><span></span></div>
+  <header class="site-header">
+    <nav class="nav shell">
+      <a class="brand" href="index.html" aria-label="StarkAGI home"><span class="brand-glyph">S</span><span>STARK<span class="brand-dim">AGI</span></span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+      <div class="nav-links">
+        <a href="#research">Research</a><a href="#architecture">Architecture</a><a href="#roadmap">Roadmap</a>
+        <a href="progress.html">Progress</a><a href="articles.html">Articles</a>
+        <a class="nav-cta" href="https://github.com/Project-stark00/stark-agi" target="_blank" rel="noreferrer">GitHub ↗</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero shell">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><i></i> M7 accepted · Founder V0 frozen</div>
+        <h1>We built Stark's <span>first model.</span></h1>
+        <p class="lead">Stark Founder V0 is a small language model trained from random initialization with a tokenizer, embedding system, attention stack, training engine, and evaluation suite built for Stark. It is not the end model. It is the controlled neural baseline the rest of Stark must beat.</p>
+        <div class="hero-actions"><a class="button primary" href="articles.html?article=stark-founder-v0-first-neural-baseline">Read the research report</a><a class="button" href="progress.html">Open build log</a></div>
+        <div class="metric-strip">
+          <div><strong>11.54M</strong><span>parameters</span></div><div><strong>226.2M</strong><span>tokens at canonical checkpoint</span></div><div><strong>3.893</strong><span>held-out test loss</span></div><div><strong>49.07</strong><span>perplexity</span></div>
+        </div>
+      </div>
+      <div class="hero-orbit reveal" aria-label="Stark Founder V0 status visualization">
+        <div class="orbit-ring r1"></div><div class="orbit-ring r2"></div><div class="orbit-ring r3"></div>
+        <div class="core"><span>FOUNDER</span><strong>V0</strong><small>FROZEN BASELINE</small></div>
+        <div class="satellite s1"><b>M0–M7</b><span>accepted</span></div><div class="satellite s2"><b>M8</b><span>working memory</span></div><div class="satellite s3"><b>LOCAL</b><span>RTX 3050</span></div>
+      </div>
+    </section>
+
+    <section id="research" class="section shell reveal">
+      <div class="section-head"><div><p class="kicker">Research result · September 2026</p><h2>A language substrate emerged. Working memory did not.</h2></div><p>The useful result is not that Founder V0 is “smart.” It is that we now know exactly what a small Stark-native transformer learns, what it fails to learn, and what the next architecture must improve.</p></div>
+      <div class="result-grid">
+        <article class="result-card positive"><span class="result-label">Language generalization</span><strong>9.462 → 3.893</strong><p>Untouched held-out loss fell by 5.569 from the random t=0 model. Perplexity fell from 12,861.6 to 49.07.</p></article>
+        <article class="result-card"><span class="result-label">Reasoning baseline</span><strong>40%</strong><p>10 deterministic multiple-choice probes. Logic, opposites, ordering and quantity passed; arithmetic and sequence probes did not.</p></article>
+        <article class="result-card"><span class="result-label">Stable knowledge</span><strong>25%</strong><p>2 of 8 stable factual probes passed. Founder is not an authoritative knowledge store.</p></article>
+        <article class="result-card warning"><span class="result-label">Exact context recall</span><strong>25%</strong><p>Chance-level across 64, 128, 256, 512, 768 and 960-token probes. A 1024-token attention window is not the same as usable memory.</p></article>
+      </div>
+      <div class="finding-panel">
+        <div><p class="kicker">Primary finding</p><h3>Context length ≠ memory.</h3><p>Founder V0 can technically attend across a 1024-token physical window, yet exact secret-code recall remains at chance. This gives Stark a clean experimental target: add persistent state, recurrent memory, retrieval and cells without destroying the language capability we already earned.</p></div>
+        <div class="recall-bars" aria-label="Context recall by prompt length">
+          <div><span>64</span><i style="--v:25%"></i><b>25%</b></div><div><span>128</span><i style="--v:25%"></i><b>25%</b></div><div><span>256</span><i style="--v:25%"></i><b>25%</b></div><div><span>512</span><i style="--v:25%"></i><b>25%</b></div><div><span>768</span><i style="--v:25%"></i><b>25%</b></div><div><span>960</span><i style="--v:25%"></i><b>25%</b></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="architecture" class="section shell reveal">
+      <div class="section-head"><div><p class="kicker">Architecture</p><h2>Founder is an organ, not the organism.</h2></div><p>Stark's long-term design remains a local-first digital being: neural language substrate, persistent memory, recurrent state, specialized cells, routing, governance and host-controlled action.</p></div>
+      <div class="architecture-map">
+        <div class="arch-node founder"><small>Neural substrate</small><strong>Founder V0</strong><span>Language · next-token prediction · 1024 physical window</span></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node active"><small>M8 research</small><strong>Working Memory</strong><span>Recurrent state · memory tokens · chunk continuity</span></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node"><small>Future</small><strong>Cells + Routing</strong><span>Specialization · SNR anatomy · heterogeneous mechanisms</span></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node"><small>Continuity</small><strong>Long-term Memory</strong><span>Episodic · semantic · retrieval · sleep consolidation</span></div>
+      </div>
+      <div class="principles-grid">
+        <article><b>Local first</b><p>Training and runtime are designed to run on owned hardware. Founder V0 was trained and evaluated on an RTX 3050 Laptop GPU.</p></article>
+        <article><b>Measure before layering</b><p>RMT, state-space models, sparse attention, retrieval and cells can be combined later—but only after each mechanism proves a measurable gain.</p></article>
+        <article><b>Memory is state</b><p>Long-lived context should not depend on replaying the entire transcript. Relevant state is activated; irrelevant state can remain dormant.</p></article>
+        <article><b>Fail closed</b><p>Tokenizer identity, dataset identity, checkpoints, resume state and release promotion are verified rather than assumed.</p></article>
+      </div>
+    </section>
+
+    <section id="roadmap" class="section shell reveal">
+      <div class="section-head"><div><p class="kicker">Build path</p><h2>From tokens to a measurable first brain.</h2></div><p>M0–M7 created and froze the control model. M8 begins the first architectural departure from a conventional transformer baseline.</p></div>
+      <div class="roadmap-list">
+        <article class="done"><span>M0</span><div><b>Tokenizer</b><p>12,288-token Stark BPE contract frozen and verified.</p></div><em>done</em></article>
+        <article class="done"><span>M1–M5</span><div><b>Founder architecture</b><p>256d embeddings, RoPE, causal attention, complete blocks and an 8-layer 11.54M-parameter autoregressive LM.</p></div><em>done</em></article>
+        <article class="done"><span>M6</span><div><b>Training engine</b><p>CUDA/BF16, deterministic crash-resume, bitwise equivalence, overfit and generalization gates.</p></div><em>done</em></article>
+        <article class="done"><span>001</span><div><b>PRETRAIN-001</b><p>250,009,600 tokens processed; validation selected step 18,000 as canonical.</p></div><em>done</em></article>
+        <article class="done"><span>M7</span><div><b>Evaluation + freeze</b><p>Untouched test evaluation, reasoning, knowledge, context, robustness and performance baseline.</p></div><em>pass</em></article>
+        <article class="active"><span>M8</span><div><b>Working Memory & Recurrent Context</b><p>Expand the memory benchmark, add persistent state across chunks, then require memory gains without unacceptable language regression.</p></div><em>active</em></article>
+      </div>
+    </section>
+
+    <section class="section shell reveal">
+      <div class="research-cta"><p class="kicker">Open research record</p><h2>Read the full Founder V0 report.</h2><p>The report includes the experiment design, canonical checkpoint, held-out results, reasoning and knowledge probes, context-recall failure, embedding and attention changes, performance, limitations, and the M8 hypothesis.</p><div><a class="button primary" href="articles.html?article=stark-founder-v0-first-neural-baseline">Research report</a><a class="button" href="https://github.com/Project-stark00/stark-agi" target="_blank" rel="noreferrer">Repository ↗</a></div></div>
+    </section>
+  </main>
+  <footer><div class="shell footer-grid"><div><a class="brand" href="index.html"><span class="brand-glyph">S</span><span>STARK<span class="brand-dim">AGI</span></span></a><p>Native Digital Life research. Local-first, measurable, and built in public.</p></div><div><a href="progress.html">Progress</a><a href="articles.html">Research articles</a><a href="https://github.com/Project-stark00/stark-agi" target="_blank" rel="noreferrer">GitHub</a></div></div></footer>
+  <script src="js/app.js"></script>
+</body></html>

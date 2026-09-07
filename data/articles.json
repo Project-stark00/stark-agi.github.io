@@ -1,0 +1,49 @@
+{
+  "articles": [
+    {
+      "slug": "stark-founder-v0-first-neural-baseline",
+      "title": "Stark Founder V0: Building and Measuring the First Neural Baseline",
+      "date": "2026-09-07",
+      "category": "Research Report",
+      "status": "Accepted",
+      "summary": "From tokenizer to PRETRAIN-001 and M7: what the 11.54M-parameter Founder learned, where it failed, and why chance-level context recall defines M8.",
+      "file": "articles/stark-founder-v0-first-neural-baseline.md",
+      "tags": [
+        "Founder V0",
+        "Pretraining",
+        "Evaluation",
+        "Memory",
+        "M7"
+      ]
+    },
+    {
+      "slug": "stark-september-architecture-snapshot",
+      "title": "Stark Architecture Snapshot — September 2026",
+      "date": "2026-09-07",
+      "category": "Architecture",
+      "status": "Current",
+      "summary": "How Founder V0 fits into the local-first digital-being design: neural language substrate, recurrent memory, cells, routing, long-term memory and governed action.",
+      "file": "articles/stark-september-architecture-snapshot.md",
+      "tags": [
+        "Architecture",
+        "Cells",
+        "Memory",
+        "Local First"
+      ]
+    },
+    {
+      "slug": "stark-native-digital-life-vision",
+      "title": "The Core Vision: Stark Native Digital Life",
+      "date": "2026-05-20",
+      "category": "Vision",
+      "status": "Active",
+      "summary": "The long-term goal remains a persistent digital being whose state, memory, learning and action survive beyond a single prompt window or model call.",
+      "file": "articles/stark-native-digital-life-vision.md",
+      "tags": [
+        "Vision",
+        "Digital Life",
+        "Continuity"
+      ]
+    }
+  ]
+}

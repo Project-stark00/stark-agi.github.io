@@ -1,0 +1,21 @@
+{
+  "package": "stark-agi-september-2026",
+  "generated": "2026-09-07",
+  "repository": "https://github.com/Project-stark00/stark-agi",
+  "files": {
+    "README.md": "ee195a6be294ea3be3682e15fb3b7324aacafb21f72b149849f0a5e06d1f8d7f",
+    "STARK.md": "c9fb7b82d10d5f57b405e06ae045cf1edd831cdf3d8c6c25332a31a3500c64f0",
+    "articles/stark-founder-v0-first-neural-baseline.md": "351d672764447c040150983318a61b8b1a2d7baa068e7df08209b34256402e9b",
+    "articles/stark-native-digital-life-vision.md": "eacd2783dded65a90b3b835c5049ef9c71662d0cb9f1920a657efab516b0dc63",
+    "articles/stark-september-architecture-snapshot.md": "61fbfbb86736e3feb429b716e1a373e98ca82ccb042f6a99805984848d56e99d",
+    "articles.html": "8c9d598acb90bcd70906614d682065e3d19c9f390c027cc79d347dcf13596c01",
+    "css/style.css": "ebf434338aff511898c3d2fed10062caf58192e062264ff13e9633c2fdf5477b",
+    "data/articles.json": "1c1ad4935d8ec5d8e72799c5a064238c1d7f3ee778da41f7b81db39aedfe4843",
+    "data/progress.json": "cc7192b32305c4e92567c1b3a3eac18edcedefc365288d0cc416771cd6764892",
+    "index.html": "7978a61ade75e2827579c24cb7de06746d677aef288b6ba35ab1c74fef938e43",
+    "js/app.js": "03f5ed5a1ad657210dd97659f79de3f422d73db5c890c37e39378bb51f4333f0",
+    "js/articles.js": "01e5633e0b44a60c264c20cf6d451d765e7a990772ce8ed3bde5df3c23eb2653",
+    "js/progress.js": "e7dadb7774e3632e2fa2309655040182db01e367a65f8899e22ec6c2013dcff1",
+    "progress.html": "117c50c62880f4ee7059da1935c295c18e0df18dd1df387cc9fa4ae0400351c4"
+  }
+}

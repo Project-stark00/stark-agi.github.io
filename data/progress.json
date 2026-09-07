@@ -1,0 +1,140 @@
+{
+  "projectStatus": {
+    "currentPhase": "M8 — Working Memory & Recurrent Context",
+    "activeMilestone": "M8.1 — Memory Benchmark Expansion",
+    "overallStatus": "Founder V0 frozen · M8 active",
+    "lastUpdated": "2026-09-07",
+    "repository": "https://github.com/Project-stark00/stark-agi",
+    "focus": "Use Stark Founder V0 as the immutable control baseline, expand the memory benchmark, and test persistent recurrent state across chunks without unacceptable regression in held-out language performance."
+  },
+  "logs": [
+    {
+      "date": "2026-09-07",
+      "title": "M7 evaluation passed; Stark Founder V0 frozen",
+      "type": "Research",
+      "status": "Completed",
+      "summary": "M7 verified the validation-selected step-18,000 checkpoint, measured untouched test loss 3.8932 / perplexity 49.07, recorded reasoning 40%, knowledge 25%, exact context recall 25%, and froze the model as the canonical baseline."
+    },
+    {
+      "date": "2026-09-06",
+      "title": "PRETRAIN-001 completed",
+      "type": "Training",
+      "status": "Completed",
+      "summary": "Founder V0 completed 19,456 optimizer steps and 250,009,600 processed tokens. Validation selected step 18,000 at 226,177,792 tokens as canonical."
+    },
+    {
+      "date": "2026-09-06",
+      "title": "M6 training engine acceptance closed",
+      "type": "Infrastructure",
+      "status": "Completed",
+      "summary": "CUDA/BF16 smoke, intentional memorization, bitwise crash/resume equivalence and real-data generalization all passed. Training state can resume without changing the trajectory."
+    },
+    {
+      "date": "2026-09-05",
+      "title": "Founder architecture assembled",
+      "type": "Model",
+      "status": "Completed",
+      "summary": "M1–M5 established 256d embeddings, RoPE, 4-head causal attention, gated MLP blocks and the 8-layer 11.54M-parameter Founder language model."
+    },
+    {
+      "date": "2026-09-05",
+      "title": "Stark Tokenizer V0 frozen",
+      "type": "Tokenizer",
+      "status": "Completed",
+      "summary": "The 12,288-token BPE tokenizer was selected, contract-tested and frozen to a content-addressed corpus and immutable model-facing identity."
+    },
+    {
+      "date": "2026-05-22",
+      "title": "Native digital-life architecture snapshot published",
+      "type": "Architecture",
+      "status": "Completed",
+      "summary": "The earlier public architecture established local-first runtime, native advisory substrate and staged authority promotion. The September Founder work now adds a measured Stark-native neural substrate to that broader design."
+    }
+  ],
+  "milestones": [
+    {
+      "id": "M0",
+      "title": "Tokenizer V0",
+      "status": "Completed",
+      "summary": "12,288 model-facing token IDs; BPE, digit isolation, round-trip and native parity contracts frozen."
+    },
+    {
+      "id": "M1",
+      "title": "Token Embedding",
+      "status": "Completed",
+      "summary": "256-dimensional tied embeddings with PAD invariants and deterministic inspection."
+    },
+    {
+      "id": "M2",
+      "title": "Position + Context Contracts",
+      "status": "Completed",
+      "summary": "RoPE and activation-plan contracts established for bounded physical context and future routed memory."
+    },
+    {
+      "id": "M3",
+      "title": "Local Causal Attention",
+      "status": "Completed",
+      "summary": "4 heads × 64 dimensions, causal integrity, incremental equivalence and bounded KV cache."
+    },
+    {
+      "id": "M4",
+      "title": "Complete Transformer Block",
+      "status": "Completed",
+      "summary": "Pre-norm RMSNorm plus SiLU-gated MLP assembled and verified."
+    },
+    {
+      "id": "M5",
+      "title": "Founder Language Model",
+      "status": "Completed",
+      "summary": "Eight blocks assembled into an 11,538,688-parameter autoregressive LM with tied output projection."
+    },
+    {
+      "id": "M6",
+      "title": "Training Infrastructure",
+      "status": "Completed",
+      "summary": "CUDA/BF16 training, curriculum, checkpoints, exact resume, overfit and generalization gates."
+    },
+    {
+      "id": "P001",
+      "title": "PRETRAIN-001",
+      "status": "Completed",
+      "summary": "250,009,600 tokens processed; step 18,000 selected by validation as canonical."
+    },
+    {
+      "id": "M7",
+      "title": "Evaluation & Baseline Freeze",
+      "status": "Completed",
+      "summary": "Held-out test, generation, reasoning, knowledge, context, robustness, performance and t0/best/final comparisons recorded."
+    },
+    {
+      "id": "M8",
+      "title": "Working Memory & Recurrent Context",
+      "status": "In Progress",
+      "summary": "Expand exact recall benchmarks, add persistent recurrent state, test beyond 1024 logical context, and preserve Founder language capability."
+    },
+    {
+      "id": "M9+",
+      "title": "Cells, Routing & Long-term Memory",
+      "status": "Planned",
+      "summary": "Specialized cells, heterogeneous mechanisms, retrieval, episodic/semantic memory and governed sleep consolidation follow only after measurable memory gains."
+    }
+  ],
+  "notes": [
+    {
+      "title": "Context length is not memory",
+      "body": "Founder has a 1024-token physical attention window but remained at 25% chance exact recall across all tested distances. Future context mechanisms must be judged by recall, not advertised window size."
+    },
+    {
+      "title": "The test set is not a selector",
+      "body": "The final checkpoint scored 0.001 lower test loss than the validation-selected best, but the canonical model remains step 18,000. Switching after observing test results would leak the test set into model selection."
+    },
+    {
+      "title": "Founder is a substrate",
+      "body": "Weak stable knowledge and arithmetic are not hidden. The project treats the model as a language substrate that later memory, cells, retrieval and reasoning mechanisms must augment."
+    },
+    {
+      "title": "One mechanism at a time",
+      "body": "RMT, Mamba-style state, sparse attention, retrieval, Infini-style memory and cells may eventually layer together. M8 starts with a minimal recurrent-memory experiment so causal improvements remain measurable."
+    }
+  ]
+}
