@@ -16,13 +16,13 @@
     },
     {
       "path": "articles/stark-m6-reproducible-training-infrastructure.md",
-      "bytes": 8353,
-      "sha256": "55b7dbb99b5cb1aeddc41409de2e38fc6228c77cb42ecb9c57986ce0e1035859"
+      "bytes": 8355,
+      "sha256": "6f3c41d9ad3eca04ad71096c34d5037df5043ef997d4d4d666f5a98a562e434a"
     },
     {
       "path": "articles/stark-m8-native-semantic-fact-memory.md",
-      "bytes": 24557,
-      "sha256": "0a1ca375fc9f0d59f5eb5bd2f648c90b019e8f217c4d0410c80b0cc727e2ed8b"
+      "bytes": 24559,
+      "sha256": "934965646082e0df7d65b44097e034ce7dca6392298983dabf39057f0cae749d"
     },
     {
       "path": "articles/stark-native-digital-life-vision.md",
@@ -236,13 +236,13 @@
     },
     {
       "path": "research/stark-m6-reproducible-training-infrastructure.html",
-      "bytes": 17063,
-      "sha256": "065e007c14a9b952708a1e7aff61f3adab62b1242830b3076968b63994a09203"
+      "bytes": 17094,
+      "sha256": "288bd8b018de8a3d0baedcbed611fba1402ad57da36c08b5bd6a7996dfeff2db"
     },
     {
       "path": "research/stark-m8-native-semantic-fact-memory.html",
-      "bytes": 40562,
-      "sha256": "f1b6840edd593ab375ad9b2a9ea13454bd75b9710cd2ed792900aa37ac44ac26"
+      "bytes": 40602,
+      "sha256": "405de85c61dfdf83495fe0215bb69685a4f0ca87d33e4aadd31936a272da0ddb"
     },
     {
       "path": "research/stark-native-digital-life-vision.html",

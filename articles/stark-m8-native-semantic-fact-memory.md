@@ -10,10 +10,10 @@ summary: "M8 established Stark's first native semantic-memory organ while preser
 
 ## Stark M8: Durable Neural State, Exact Evidence, Consolidation, Multi-Memory Recall, and Causal Founder Integration
 
-**Project Stark Research Paper — Public Edition**  
-**Date:** 9 September 2026  
-**Status:** M8 research complete; promoted with an explicit integration boundary  
-**Publication note:** Internal paths, machine identifiers, artifact hashes, and operational filenames are intentionally omitted.
+- **Project Stark Research Paper — Public Edition**
+- **Date:** 9 September 2026
+- **Status:** M8 research complete; promoted with an explicit integration boundary
+- **Publication note:** Internal paths, machine identifiers, artifact hashes, and operational filenames are intentionally omitted.
 
 ---
 

@@ -10,9 +10,9 @@ summary: "M6 established reproducible local training, exact restart semantics, l
 
 ## M6 Technical Research Report
 
-**Project Stark Technical Research Report — Public Edition**  
-**Date:** 9 September 2026  
-**Publication note:** Internal paths, machine identifiers, artifact hashes, and operational filenames are intentionally omitted.
+- **Project Stark Technical Research Report — Public Edition**
+- **Date:** 9 September 2026
+- **Publication note:** Internal paths, machine identifiers, artifact hashes, and operational filenames are intentionally omitted.
 
 ## Abstract
 
