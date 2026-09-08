@@ -1,0 +1,179 @@
+{
+  "projectStatus": {
+    "currentPhase": "M8 — Native Semantic Fact Memory (Complete)",
+    "activeMilestone": "Pre-M9 — documentation and research freeze",
+    "overallStatus": "M8 promoted with explicit boundary · M9 design next",
+    "lastUpdated": "2026-09-09",
+    "repository": "https://github.com/Project-stark00/stark-agi",
+    "focus": "Freeze the M8 research record, preserve SFM-1/exact-memory/SFM-T/workspace contracts, and carry the measured cognition/utilization bottleneck into a fresh M9 design pass without preselecting a mechanism."
+  },
+  "logs": [
+    {
+      "date": "2026-09-09",
+      "title": "M8.12 promotion review closed",
+      "type": "Research",
+      "status": "Completed",
+      "summary": "M8 completed as the Semantic Memory milestone. SFM-1, exact memory, SFM-T and typed workspace memory contracts were promoted. FounderV0CompatibilityBridge v1 remains a frozen research baseline rather than the final cognitive interface."
+    },
+    {
+      "date": "2026-09-09",
+      "title": "M8.11 memory-utilization experiment accepted",
+      "type": "Evaluation",
+      "status": "Completed",
+      "summary": "249/249 repository tests and 46/46 experiment-validity gates passed. Correct single-memory context improved target log-probability on 467/512 cases (91.21%), while exact generation remained 0/64 and neighborhood memory was negative on average."
+    },
+    {
+      "date": "2026-09-09",
+      "title": "M8.10 established causal Founder integration",
+      "type": "Integration",
+      "status": "Completed",
+      "summary": "237/237 regression and 35/35 gates passed. Verified memory changed Founder V0 next-token distributions on 16/16 known probes without changing Founder, canonical memory, or generation 80."
+    },
+    {
+      "date": "2026-09-08",
+      "title": "M8.9 SFM-T multi-memory recall frozen",
+      "type": "Memory",
+      "status": "Completed",
+      "summary": "SFM-T added deterministic retrieval breadth while preserving retrieve-one semantics and the memory/thinking boundary. The accepted r2 preserved a failed r1 gate as evidence and froze the discrete retrieval interface."
+    },
+    {
+      "date": "2026-09-08",
+      "title": "M8.8 offline consolidation accepted",
+      "type": "Memory",
+      "status": "Completed",
+      "summary": "Accepted evidence was consolidated from generation 64 to 80 without new acquisition, reinforcement, or gradients. A second pass produced no drift and discrete retrieval remained unchanged."
+    },
+    {
+      "date": "2026-09-07",
+      "title": "M8.5–M8.7 established knowledge, generalization and exactness",
+      "type": "Memory",
+      "status": "Completed",
+      "summary": "SFM-1 acquired 16 stable facts; frozen retrieval returned 16/16 known facts, rejected 516/516 negatives, preserved 4/4 ambiguities, and exact memory resolved 16/16 values with corruption and injection fail-closed tests."
+    },
+    {
+      "date": "2026-09-07",
+      "title": "M7 evaluation passed; Stark Founder V0 frozen",
+      "type": "Research",
+      "status": "Completed",
+      "summary": "M7 verified the validation-selected step-18,000 checkpoint, held-out loss 3.8932, and the weak reasoning/knowledge/context baselines that became the control for M8."
+    },
+    {
+      "date": "2026-09-06",
+      "title": "PRETRAIN-001 completed",
+      "type": "Training",
+      "status": "Completed",
+      "summary": "Founder V0 completed 19,456 optimizer steps and 250,009,600 processed tokens. Validation selected step 18,000 at 226,177,792 tokens as canonical."
+    },
+    {
+      "date": "2026-09-06",
+      "title": "M6 training engine acceptance closed",
+      "type": "Infrastructure",
+      "status": "Completed",
+      "summary": "CUDA/BF16 training, controlled overfit, exact crash/resume, leakage controls and real-data generalization established the reproducible substrate used by PRETRAIN-001."
+    },
+    {
+      "date": "2026-09-05",
+      "title": "M1–M5 Founder architecture assembled",
+      "type": "Model",
+      "status": "Completed",
+      "summary": "256d embeddings, RoPE, local causal attention, gated Transformer blocks and the eight-layer 11.54M-parameter Founder language model were assembled and acceptance-tested."
+    },
+    {
+      "date": "2026-09-05",
+      "title": "Stark Tokenizer V0 frozen",
+      "type": "Tokenizer",
+      "status": "Completed",
+      "summary": "The 12,288-token BPE tokenizer was contract-tested and frozen to a content-addressed model-facing identity."
+    }
+  ],
+  "milestones": [
+    {
+      "id": "M0",
+      "title": "Tokenizer V0",
+      "status": "Completed",
+      "summary": "12,288 model-facing token IDs; BPE, digit isolation, round-trip and native parity contracts frozen."
+    },
+    {
+      "id": "M1",
+      "title": "Token Embedding",
+      "status": "Completed",
+      "summary": "256-dimensional tied embeddings with PAD invariants and deterministic inspection."
+    },
+    {
+      "id": "M2",
+      "title": "Position + Context Contracts",
+      "status": "Completed",
+      "summary": "RoPE and bounded physical-context contracts established."
+    },
+    {
+      "id": "M3",
+      "title": "Local Causal Attention",
+      "status": "Completed",
+      "summary": "4 heads × 64 dimensions, causal integrity, incremental equivalence and bounded KV cache."
+    },
+    {
+      "id": "M4",
+      "title": "Complete Transformer Block",
+      "status": "Completed",
+      "summary": "Pre-norm RMSNorm plus SiLU-gated MLP assembled and verified."
+    },
+    {
+      "id": "M5",
+      "title": "Founder Language Model",
+      "status": "Completed",
+      "summary": "Eight blocks assembled into an 11,538,688-parameter autoregressive LM with tied output projection."
+    },
+    {
+      "id": "M6",
+      "title": "Reproducible Training Infrastructure",
+      "status": "Completed",
+      "summary": "CUDA/BF16 training, leakage controls, exact crash/resume, controlled overfit, generalization and fail-closed continual-learning boundaries."
+    },
+    {
+      "id": "P001",
+      "title": "PRETRAIN-001",
+      "status": "Completed",
+      "summary": "250,009,600 tokens processed; step 18,000 selected by validation as canonical."
+    },
+    {
+      "id": "M7",
+      "title": "Evaluation & Baseline Freeze",
+      "status": "Completed",
+      "summary": "Held-out evaluation, generation, reasoning, knowledge, context, robustness, performance and t0/best/final comparisons recorded."
+    },
+    {
+      "id": "M8",
+      "title": "Native Semantic Fact Memory",
+      "status": "Completed",
+      "summary": "SFM-1 durable semantic state, exact evidence, conservative abstaining retrieval, governed consolidation, SFM-T multi-memory recall, typed workspace integration and utilization characterization. Promoted with an explicit cognitive-interface boundary."
+    },
+    {
+      "id": "M9",
+      "title": "Next Cognitive Milestone",
+      "status": "Planned",
+      "summary": "Not yet architecturally frozen. M8 evidence identifies selective memory interpretation/utilization as the next bottleneck; M9 will be designed from a fresh research question and acceptance contract."
+    }
+  ],
+  "notes": [
+    {
+      "title": "Memory is not thinking",
+      "body": "SFM may store, associate, activate, rank, retrieve and preserve. It does not decide which memory is true, applicable, current or actionable."
+    },
+    {
+      "title": "READ is not LEARN",
+      "body": "M8.10 and M8.11 used memory with zero acquisition, reinforcement, consolidation, retraction or gradient steps. Founder output is not evidence and does not automatically become memory."
+    },
+    {
+      "title": "Neural association is not exact truth",
+      "body": "SFM selects a fact identity approximately; exact payload and provenance are resolved from an independently integrity-bound exact-memory substrate."
+    },
+    {
+      "title": "Causal delivery is not reliable utilization",
+      "body": "Memory changed Founder computation on all 16 M8.10 known probes and helped single-memory targets on 91.21% of M8.11 cases, yet exact answer generation remained 0/64. The next bottleneck is cognition, not durable storage."
+    },
+    {
+      "title": "Preserve failed evidence",
+      "body": "M8.9 r1 failed a bad floating-score invariant after consolidation. The attempt was preserved and r2 corrected the gate to the discrete retrieval interface rather than rewriting history."
+    }
+  ]
+}

@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0b0f">
+  <meta name="author" content="Jeremiah Wong Zhi Qi">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <title>Stark Founder V0: Building and Measuring the First Neural Baseline | STARK Digital</title>
+  <meta name="description" content="From tokenizer through PRETRAIN-001 and M7: the 11.54M-parameter frozen language substrate that became the control for Stark memory and cognition research.">
+  <link rel="canonical" href="https://project-stark00.github.io/stark-agi/research/stark-founder-v0-first-neural-baseline.html">
+  <link rel="icon" href="../assets/stark-mark.svg" type="image/svg+xml">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="STARK Digital">
+  <meta property="og:title" content="Stark Founder V0: Building and Measuring the First Neural Baseline">
+  <meta property="og:description" content="From tokenizer through PRETRAIN-001 and M7: the 11.54M-parameter frozen language substrate that became the control for Stark memory and cognition research.">
+  <meta property="og:url" content="https://project-stark00.github.io/stark-agi/research/stark-founder-v0-first-neural-baseline.html">
+  <meta property="article:published_time" content="2026-09-07">
+  <meta property="article:author" content="Jeremiah Wong Zhi Qi">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Stark Founder V0: Building and Measuring the First Neural Baseline">
+  <meta name="twitter:description" content="From tokenizer through PRETRAIN-001 and M7: the 11.54M-parameter frozen language substrate that became the control for Stark memory and cognition research.">
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","headline":"Stark Founder V0: Building and Measuring the First Neural Baseline","description":"From tokenizer through PRETRAIN-001 and M7: the 11.54M-parameter frozen language substrate that became the control for Stark memory and cognition research.","datePublished":"2026-09-07","dateModified":"2026-09-07","author":{"@type":"Person","@id":"https://project-stark00.github.io/stark-agi/#jeremiah","name":"Jeremiah Wong Zhi Qi","url":"https://project-stark00.github.io/stark-agi/"},"publisher":{"@type":"Organization","@id":"https://project-stark00.github.io/stark-agi/#organization","name":"STARK Digital","url":"https://project-stark00.github.io/stark-agi/"},"mainEntityOfPage":"https://project-stark00.github.io/stark-agi/research/stark-founder-v0-first-neural-baseline.html","isPartOf":{"@type":"WebSite","name":"STARK Digital","url":"https://project-stark00.github.io/stark-agi/"},"keywords":"Founder V0, Pretraining, Evaluation, M0–M7","about":[{"@type":"Thing","name":"Founder V0"},{"@type":"Thing","name":"Pretraining"},{"@type":"Thing","name":"Evaluation"},{"@type":"Thing","name":"M0–M7"}]}</script>
+</head>
+<body>
+  <a class="skip-link" href="#article-content">Skip to article</a>
+  <div class="page-grid" aria-hidden="true"></div>
+  <header class="site-header">
+    <nav class="nav shell" aria-label="Primary navigation">
+      <a class="brand" href="../index.html" aria-label="STARK Digital home"><span class="brand-mark">SD</span><span class="brand-wordmark">STARK <i>DIGITAL</i></span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Open navigation"><span></span><span></span></button>
+      <div class="nav-links" id="site-navigation"><a href="../articles.html" aria-current="page">Research</a><a href="../index.html#method">Method</a><a href="../progress.html">Progress</a><a href="../index.html#about">About</a><a class="nav-cta" href="https://github.com/Project-stark00/stark-agi" target="_blank" rel="noreferrer">View GitHub <span aria-hidden="true">↗</span></a></div>
+    </nav>
+  </header>
+
+  <main>
+    <header class="article-hero">
+      <div class="shell">
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../index.html">STARK Digital</a><span>/</span><a href="../articles.html">Research</a><span>/</span><span>R—03</span></nav>
+        <div class="article-hero-grid">
+          <div>
+            <p class="kicker">Research Report · Accepted</p>
+            <h1>Stark Founder V0: Building and Measuring the First Neural Baseline</h1>
+            <p class="article-deck">From tokenizer through PRETRAIN-001 and M7: the 11.54M-parameter frozen language substrate that became the control for Stark memory and cognition research.</p>
+          </div>
+          <aside class="article-byline" aria-label="Publication details">
+            <dl>
+              <div><dt>Author</dt><dd>Jeremiah Wong Zhi Qi</dd></div>
+              <div><dt>Published</dt><dd><time datetime="2026-09-07">Sep 07, 2026</time></dd></div>
+              <div><dt>Series</dt><dd>STARK Digital Research</dd></div>
+              <div><dt>Reference</dt><dd>R—03</dd></div>
+            </dl>
+            <a class="button" href="https://github.com/Project-stark00/stark-agi" target="_blank" rel="noreferrer">View repository <span aria-hidden="true">↗</span></a>
+          </aside>
+        </div>
+      </div>
+    </header>
+
+    <div class="article-layout shell">
+      <aside class="article-toc" aria-label="On this page"><span>On this page</span><ol><li class="toc-main"><a href="#abstract">Abstract</a></li><li class="toc-main"><a href="#1-why-build-a-small-founder-model">1. Why build a small Founder model?</a></li><li class="toc-main"><a href="#2-system-built-from-first-principles">2. System built from first principles</a></li><li class="toc-main"><a href="#3-model-configuration">3. Model configuration</a></li><li class="toc-main"><a href="#4-training-infrastructure-was-part-of-the-experiment">4. Training infrastructure was part of the experiment</a></li><li class="toc-main"><a href="#5-pretrain-001">5. PRETRAIN-001</a></li><li class="toc-main"><a href="#6-m7-held-out-evaluation">6. M7 held-out evaluation</a></li><li class="toc-main"><a href="#7-what-reasoning-emerged">7. What reasoning emerged?</a></li><li class="toc-main"><a href="#8-what-factual-knowledge-emerged">8. What factual knowledge emerged?</a></li><li class="toc-main"><a href="#9-the-critical-finding-context-length-is-not-working-memory">9. The critical finding: context length is not working memory</a></li><li class="toc-main"><a href="#10-generation-behavior">10. Generation behavior</a></li><li class="toc-main"><a href="#11-internal-representation-changed-substantially">11. Internal representation changed substantially</a></li><li class="toc-main"><a href="#12-attention-layers-differentiated">12. Attention layers differentiated</a></li><li class="toc-main"><a href="#13-runtime-performance">13. Runtime performance</a></li><li class="toc-main"><a href="#14-robustness-and-release-integrity">14. Robustness and release integrity</a></li><li class="toc-main"><a href="#15-what-we-can-claimand-what-we-cannot">15. What we can claim—and what we cannot</a></li><li class="toc-sub"><a href="#supported-by-this-experiment">Supported by this experiment</a></li><li class="toc-sub"><a href="#not-established">Not established</a></li><li class="toc-main"><a href="#16-what-m8-became">16. What M8 became</a></li><li class="toc-main"><a href="#17-why-this-baseline-still-matters-for-stark">17. Why this baseline still matters for Stark</a></li><li class="toc-main"><a href="#conclusion">Conclusion</a></li></ol></aside>
+      <article id="article-content" class="article-shell">
+        <div class="markdown-body"><h2 id="abstract">Abstract</h2>
+<p>Stark Founder V0 is the first neural language model built specifically as a controlled baseline for the Stark digital-being research program. Rather than beginning with a large pretrained model and treating its capabilities as a black box, the project constructed the model stack from the tokenizer upward, validated training and crash-resume behavior, ran a full pretraining experiment, and then froze a validation-selected checkpoint before opening the untouched test evaluation.</p>
+<p>The result is an <strong>11,538,688-parameter</strong>, 8-layer autoregressive language model with a <strong>1,024-token physical attention window</strong>. The canonical checkpoint is <strong>step 18,000</strong>, selected by validation at <strong>226,177,792 processed tokens</strong>. On the untouched test split, loss fell from <strong>9.4620 at random initialization to 3.8932</strong>, and perplexity fell from <strong>12,861.6 to 49.07</strong>. This is strong evidence that the model learned generalizable language structure.</p>
+<p>The same evaluation also exposes the model&#39;s limits. Deterministic reasoning accuracy was <strong>40%</strong>, stable factual knowledge accuracy was <strong>25%</strong>, and synthetic exact context recall remained at <strong>25%—chance level—at every tested distance from 64 through 960 tokens</strong>. Greedy generation showed a <strong>23.36% repeated-4gram fraction</strong>. These failures are not treated as embarrassing edge cases; they define the next research target.</p>
+<blockquote>The central M7 finding is that a model can possess a 1,024-token attention window without learning reliable 1,024-token working memory.</blockquote>
+<p>M8 therefore begins with Working Memory &amp; Recurrent Context: persistent state across chunks, stronger recall benchmarks, and explicit regression tests against the frozen Founder V0 language baseline.</p>
+<h2 id="1-why-build-a-small-founder-model">1. Why build a small Founder model?</h2>
+<p>Stark is intended to become a long-lived digital being rather than a stateless chatbot. That goal requires us to separate several problems that are usually hidden inside one very large pretrained transformer:</p>
+<ul>
+<li>language representation;</li>
+<li>short-term reasoning;</li>
+<li>working memory;</li>
+<li>long-term episodic and semantic memory;</li>
+<li>specialized skills or cells;</li>
+<li>routing between different computational mechanisms;</li>
+<li>continual learning and sleep consolidation;</li>
+<li>governance and host-controlled action.</li>
+</ul>
+<p>If all of those capabilities are inherited from a giant pretrained model, it becomes difficult to tell which architectural idea is actually helping Stark. Founder V0 exists as a <strong>control condition</strong>: a small, inspectable language substrate that future recurrent memory, cells, retrieval and state-space mechanisms must beat measurably.</p>
+<h2 id="2-system-built-from-first-principles">2. System built from first principles</h2>
+<p>The Founder stack was developed through acceptance milestones rather than one monolithic training script.</p>
+<div class="table-wrap"><table><thead><tr><th>Milestone</th><th>Result</th></tr></thead><tbody><tr><td>M0</td><td>Stark Tokenizer V0 frozen: 12,288 model-facing token IDs</td></tr><tr><td>M1</td><td>256-dimensional tied token embeddings with PAD invariants</td></tr><tr><td>M2</td><td>RoPE and context-activation contracts</td></tr><tr><td>M3</td><td>4-head local causal attention, 64 dimensions per head</td></tr><tr><td>M4</td><td>Pre-norm RMSNorm + SiLU-gated MLP transformer block</td></tr><tr><td>M5</td><td>8-layer Founder LM, 11,538,688 unique parameters</td></tr><tr><td>M6</td><td>CUDA/BF16 training engine, deterministic resume and training acceptance</td></tr><tr><td>PRETRAIN-001</td><td>Full first pretraining run</td></tr><tr><td>M7</td><td>Evaluation, comparison, integrity checks and canonical freeze</td></tr></tbody></table></div>
+<p>The tokenizer was already frozen before Founder training. It uses BPE, preserves individual digit isolation, and is locked to a content-addressed corpus identity. The model therefore cannot silently drift to a different token system after training begins.</p>
+<h2 id="3-model-configuration">3. Model configuration</h2>
+<pre><code data-language="text">Vocabulary           12,288
+Model width           256
+Layers                8
+Attention heads       4
+Head dimension        64
+MLP hidden width      1,024
+Physical window       1,024 tokens
+Parameters            11,538,688
+Output projection     tied to token embeddings
+Training precision    BF16 autocast / FP32 parameters
+Canonical checkpoint  step 18,000
+Canonical tokens      226,177,792</code></pre>
+<p>The architecture is intentionally small. The objective was not to compete with frontier language models. The objective was to create a neural substrate cheap enough to retrain and modify repeatedly while still large enough to demonstrate whether real language learning emerges.</p>
+<h2 id="4-training-infrastructure-was-part-of-the-experiment">4. Training infrastructure was part of the experiment</h2>
+<p>Before full pretraining, M6 required the training system itself to prove that it could be trusted.</p>
+<p>The gates included:</p>
+<ul>
+<li>a CUDA training smoke test;</li>
+<li>finite loss and gradients;</li>
+<li>exact PAD protection;</li>
+<li>real checkpoint save/load;</li>
+<li>RNG serialization and CUDA RNG restoration;</li>
+<li>stream-state restoration;</li>
+<li>intentional memorization to a strong loss target;</li>
+<li>real-data train and validation improvement;</li>
+<li><strong>bitwise crash/resume equivalence</strong>.</li>
+</ul>
+<p>The resume-equivalence test compared an uninterrupted trajectory with a checkpointed 50+5-step trajectory. All 74 parameter tensors were bitwise identical at the matching endpoint, with maximum weight difference <strong>0.0</strong>. This matters for long-lived Stark training: a crash should not silently create a different experiment.</p>
+<h2 id="5-pretrain-001">5. PRETRAIN-001</h2>
+<p>PRETRAIN-001 processed <strong>250,009,600 tokens</strong> over <strong>19,456 optimizer steps</strong>. The training dataset contained approximately <strong>40.2 million train tokens</strong>, meaning the run made several corpus-equivalent passes under a sequence-length curriculum that ultimately reached 1,024 tokens.</p>
+<p>The minimum validation loss occurred at:</p>
+<pre><code data-language="text">step                 18,000
+tokens seen          226,177,792
+validation loss      4.00062058866024</code></pre>
+<p>That checkpoint was named <code>best</code> before the untouched test results were examined.</p>
+<p>The final checkpoint at step 19,456 later produced a test loss approximately <strong>0.00103 lower</strong> than the validation-selected best. We did <strong>not</strong> replace the canonical model with the final checkpoint. Doing so after seeing the test set would turn the test data into another model-selection signal.</p>
+<p>This distinction is small numerically but important methodologically.</p>
+<h2 id="6-m7-held-out-evaluation">6. M7 held-out evaluation</h2>
+<p>M7 compared three models on the same untouched test split:</p>
+<div class="table-wrap"><table><thead><tr><th>Checkpoint</th><th>Test loss</th><th>Perplexity</th></tr></thead><tbody><tr><td>t=0 random initialization</td><td>9.462002</td><td>12,861.61</td></tr><tr><td><strong>best / step 18,000</strong></td><td><strong>3.893165</strong></td><td><strong>49.07</strong></td></tr><tr><td>final / step 19,456</td><td>3.892131</td><td>49.02</td></tr></tbody></table></div>
+<p>The canonical model improves held-out loss over t=0 by <strong>5.568837</strong>.</p>
+<p>This is the most important positive result of Founder V0. The model did not merely memorize the training stream; it learned statistical structure that transfers to held-out text.</p>
+<h2 id="7-what-reasoning-emerged">7. What reasoning emerged?</h2>
+<p>The deterministic M7 reasoning suite used conditional continuation likelihood rather than an LLM judge. Founder V0 answered <strong>4 of 10</strong> cases correctly.</p>
+<div class="table-wrap"><table><thead><tr><th>Probe family</th><th>Accuracy</th></tr></thead><tbody><tr><td>Arithmetic</td><td>0%</td></tr><tr><td>Comparison</td><td>0%</td></tr><tr><td>Sequence continuation</td><td>0%</td></tr><tr><td>Classification</td><td>0%</td></tr><tr><td>Logic</td><td>100%</td></tr><tr><td>Opposites</td><td>100%</td></tr><tr><td>Ordering</td><td>100%</td></tr><tr><td>Quantity</td><td>100%</td></tr></tbody></table></div>
+<p>Founder therefore learned some language-mediated relational patterns, but not reliable elementary arithmetic or algorithmic sequence behavior. At 11.5M parameters, this is a useful separation: <strong>language modeling improved far more strongly than explicit symbolic reasoning</strong>.</p>
+<h2 id="8-what-factual-knowledge-emerged">8. What factual knowledge emerged?</h2>
+<p>The stable-knowledge probe scored <strong>2 of 8 correct (25%)</strong>. It succeeded on Earth-orbits-the-Sun and ice-as-solid-water, while failing several equally stable facts involving geography, calendars, geometry, biology and language morphology.</p>
+<p>This supports an important Stark design decision:</p>
+<blockquote>Founder parameters should not be treated as the authoritative factual database of a long-lived digital being.</blockquote>
+<p>Stable facts, host teaching, episodic experience and changing world knowledge need explicit memory, provenance, retrieval and governed consolidation. Parametric memory can help, but it should not be the only place Stark stores truth.</p>
+<h2 id="9-the-critical-finding-context-length-is-not-working-memory">9. The critical finding: context length is not working memory</h2>
+<p>M7 inserted a synthetic secret code near the beginning of a controlled prompt, added distractor text, and then asked for the code. Four answer options were scored by conditional likelihood. Chance performance is 25%.</p>
+<div class="table-wrap"><table><thead><tr><th>Prompt length</th><th>Exact recall</th></tr></thead><tbody><tr><td>64</td><td>25%</td></tr><tr><td>128</td><td>25%</td></tr><tr><td>256</td><td>25%</td></tr><tr><td>512</td><td>25%</td></tr><tr><td>768</td><td>25%</td></tr><tr><td>960</td><td>25%</td></tr></tbody></table></div>
+<p>The model did not gradually degrade with distance. It was already at chance at the shortest tested distance and remained there.</p>
+<p>This tells us that the <strong>physical ability to attend to tokens is not equivalent to the learned ability to use those tokens as reliable working memory</strong>.</p>
+<p>That distinction is central to Stark. A future digital being may need to process hours, days or years of history, but it does not need every historical token simultaneously active. It needs persistent state, retrieval, topic reactivation, conflict handling and selective activation.</p>
+<p>M8 is designed around that gap.</p>
+<h2 id="10-generation-behavior">10. Generation behavior</h2>
+<p>Founder V0 generates recognizably structured language, conversation-like text and technical syntax, but it remains unstable.</p>
+<p>Measured greedy-generation statistics:</p>
+<pre><code data-language="text">mean distinct-token ratio       52.73%
+repeated-4gram fraction         23.36%
+PAD emissions                   0</code></pre>
+<p>A prose prompt such as <code>Once upon a</code> produced grammatically recognizable continuations, although training-domain material could intrude. A prompt about memory could produce coherent sentences before entering repetition loops. Role-token prompts also revealed that the model has not yet learned a stable Stark assistant identity or reliable instruction-following behavior.</p>
+<p>That is acceptable for this milestone. Founder V0 was designed to learn the <strong>language substrate</strong>, not to hard-code a finished personality.</p>
+<h2 id="11-internal-representation-changed-substantially">11. Internal representation changed substantially</h2>
+<p>At random initialization, embedding standard deviation was approximately <strong>0.0200</strong>. At the canonical checkpoint it was <strong>0.05657</strong> while the PAD embedding remained exactly zero.</p>
+<p>Tracked token-component norms also increased substantially during training. This confirms that learning reorganized the embedding substrate rather than only adjusting a thin output surface.</p>
+<p>The static nearest-neighbor probe has an important limitation: several words such as <code>memory</code> and <code>thought</code> are multi-token under Stark Tokenizer V0, so inspecting one constituent token is not a clean semantic-word benchmark. Future evaluation should use whole-word or contextual representations.</p>
+<h2 id="12-attention-layers-differentiated">12. Attention layers differentiated</h2>
+<p>At t=0, attention entropy and mean attention distance were nearly homogeneous across all eight layers. After training, layer behavior separated.</p>
+<p>For example, mean attention entropy moved from roughly <strong>1.66</strong> in every random layer to a range of approximately <strong>1.07–1.28</strong> in the canonical model. Mean attention distance also differentiated, with the final layer reaching approximately <strong>2.99</strong> on the diagnostic sequence while early layers were generally more local.</p>
+<p>This does not by itself prove high-level specialization, but it provides measurable evidence that the eight layers stopped behaving like nearly identical random transforms.</p>
+<h2 id="13-runtime-performance">13. Runtime performance</h2>
+<p>M7 performance measurements on the accepted local BF16 accelerator:</p>
+<div class="table-wrap"><table><thead><tr><th>Forward length</th><th>Throughput</th><th>Peak allocated</th></tr></thead><tbody><tr><td>128</td><td>6,993 tok/s</td><td>87.9 MiB</td></tr><tr><td>512</td><td>26,761 tok/s</td><td>120.1 MiB</td></tr><tr><td>1,024</td><td>45,767 tok/s</td><td>163.2 MiB</td></tr></tbody></table></div>
+<p>Autoregressive generation from a 128-token prompt reached approximately <strong>43.6 new tokens/s</strong>, with about <strong>88.9 MiB peak allocated</strong> and <strong>274 MiB peak reserved</strong> during the probe.</p>
+<p>The small footprint is strategically useful: future experiments can add memory modules, cells or alternate sequence mechanisms without immediately exceeding local hardware limits.</p>
+<h2 id="14-robustness-and-release-integrity">14. Robustness and release integrity</h2>
+<p>M7 acceptance passed every integrity gate:</p>
+<ul>
+<li>validation-selected <code>best</code> matched the minimum validation record;</li>
+<li>canonical weights matched the expected frozen identity;</li>
+<li>PAD remained exactly zero across checkpoints;</li>
+<li>held-out losses were finite;</li>
+<li>best beat t=0 on the untouched test set;</li>
+<li>robustness probes remained finite;</li>
+<li>invalid API conditions were rejected as expected;</li>
+<li>generation did not emit PAD;</li>
+<li>the source best checkpoint remained unchanged during evaluation.</li>
+</ul>
+<p>Canonical Founder V0 identity:</p>
+<pre><code data-language="text">checkpoint        PRETRAIN-001 / best / step 18,000
+parameters        11,538,688
+tokens seen       226,177,792
+attention window  1,024
+weights identity   frozen and independently verified</code></pre>
+<p>Any descendant that changes those weights is not Founder V0; it becomes a new candidate that must be compared against this control.</p>
+<h2 id="15-what-we-can-claimand-what-we-cannot">15. What we can claim—and what we cannot</h2>
+<h3 id="supported-by-this-experiment">Supported by this experiment</h3>
+<ul>
+<li>A Stark-native 11.5M-parameter transformer trained from random initialization learned strong held-out language modeling relative to t=0.</li>
+<li>The training and checkpoint infrastructure can resume deterministically under the accepted test conditions.</li>
+<li>The model learned some relational language patterns but weak arithmetic and weak stable factual recall.</li>
+<li>A 1,024-token attention window did not produce reliable exact working memory in the M7 recall probe.</li>
+<li>Training measurably reorganized embeddings and layer attention statistics.</li>
+<li>The frozen model is small enough for rapid local architectural experimentation.</li>
+</ul>
+<h3 id="not-established">Not established</h3>
+<ul>
+<li>Founder V0 is not AGI.</li>
+<li>The 40% reasoning score is not evidence of general reasoning ability.</li>
+<li>The 25% knowledge score is not a complete measure of learned world knowledge.</li>
+<li>The 25% recall result comes from a deliberately small first diagnostic benchmark and should be expanded before fine-grained statistical claims.</li>
+<li>Attention statistics do not prove human-interpretable layer specialization.</li>
+<li>The current model is not a mature Stark identity, assistant or autonomous digital being.</li>
+</ul>
+<h2 id="16-what-m8-became">16. What M8 became</h2>
+<p>When Founder V0 was frozen, its weak context recall originally suggested a recurrent working-memory experiment. The subsequent design pass separated two different problems: temporary working context and <strong>durable semantic factual knowledge</strong>. M8 deliberately chose the latter so that the first post-Founder architecture would test whether Stark could gain knowledge without rewriting its language substrate.</p>
+<p>M8 therefore became <strong>Native Semantic Fact Memory</strong> rather than a recurrent-context extension. It introduced SFM-1, a persistent neural semantic-memory state, exact factual evidence, governed consolidation, multi-memory recall, and a typed Global Workspace boundary to frozen Founder V0.</p>
+<p>The central M8 result is now established: correct single-memory context usually moves Founder&#39;s target distribution in the right direction, but the weak V0 language substrate does not yet turn that signal into reliable exact answers. Memory storage and retrieval are no longer the primary bottleneck; selective cognitive utilization is.</p>
+<h2 id="17-why-this-baseline-still-matters-for-stark">17. Why this baseline still matters for Stark</h2>
+<p>The value of Founder V0 is not its raw benchmark score. It remains Stark&#39;s <strong>known control organism</strong>.</p>
+<p>Every later architecture can still be asked:</p>
+<pre><code data-language="text">Did memory retrieval improve?
+Did ordinary language loss regress?
+Did an exact fact survive neural association?
+Did READ accidentally become LEARN?
+Did irrelevant memory interfere?
+Can multiple memories coexist without memory itself reasoning?
+Did the new mechanism alter the frozen Founder control?
+Can the entire state survive a crash and deterministic restart?</code></pre>
+<p>That is why M8 could establish a semantic-memory organ without hiding Founder&#39;s limitations.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Founder V0 succeeded at the job it was built to do: create a small, reproducible, locally trainable neural language baseline for Stark.</p>
+<p>It learned genuine held-out language structure. It did not become a mature knowledge store, working-memory system, or general reasoning system. M8 then demonstrated that Stark can add a separate durable semantic-memory organ while preserving that control model exactly.</p>
+<p>The project transition is now:</p>
+<pre><code data-language="text">M0–M7: build and freeze a measurable neural language substrate
+M8:    add a native semantic-memory organ and prove causal integration
+Next:  improve cognition/workspace utilization without weakening memory/truth boundaries</code></pre>
+<p>M9 is intentionally not defined by this article. Its architecture should be chosen only after its research question and acceptance criteria are frozen.</p></div>
+        <footer class="article-end">
+          <p>Continue through the STARK Digital research record</p>
+          <nav class="article-next" aria-label="Related research"><a href="stark-m6-reproducible-training-infrastructure.html">Reproducible Local Training Infrastructure for Stark Founder V0 <span aria-hidden="true">↗</span></a><a href="stark-september-architecture-snapshot.html">Stark Architecture Snapshot — September 2026 <span aria-hidden="true">↗</span></a></nav>
+        </footer>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer"><div class="shell footer-grid"><div><a class="brand" href="../index.html"><span class="brand-mark">SD</span><span class="brand-wordmark">STARK <i>DIGITAL</i></span></a><p>Independent native digital life research by Jeremiah Wong Zhi Qi.</p></div><div class="footer-nav"><span>Explore</span><a href="../articles.html">Research</a><a href="../progress.html">Progress</a><a href="../index.html#about">About</a></div><div class="footer-nav"><span>External</span><a href="https://github.com/Project-stark00/stark-agi" target="_blank" rel="noreferrer">Repository ↗</a></div></div><div class="shell footer-base"><span>© 2026 Jeremiah Wong Zhi Qi</span><span>STARK Digital / Research in public</span></div></footer>
+  <script src="../js/app.js"></script>
+</body>
+</html>

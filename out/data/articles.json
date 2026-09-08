@@ -1,0 +1,83 @@
+{
+  "articles": [
+    {
+      "slug": "stark-m8-native-semantic-fact-memory",
+      "title": "Native Semantic Fact Memory for a Frozen Small Language Model",
+      "date": "2026-09-09",
+      "category": "Research Paper",
+      "status": "Accepted · Promoted with Boundary",
+      "summary": "M8 established Stark's first native semantic-memory organ while preserving a frozen language substrate, and identified selective cognitive utilization as the next bottleneck.",
+      "file": "articles/stark-m8-native-semantic-fact-memory.md",
+      "tags": [
+        "M8",
+        "SFM-1",
+        "Semantic Memory",
+        "Exact Memory",
+        "Global Workspace"
+      ],
+      "download": "assets/research/papers/Stark_M8_Native_Semantic_Memory_Research_Paper_Public.pdf"
+    },
+    {
+      "slug": "stark-m6-reproducible-training-infrastructure",
+      "title": "Reproducible Local Training Infrastructure for Stark Founder V0",
+      "date": "2026-09-09",
+      "category": "Technical Report",
+      "status": "Accepted",
+      "summary": "M6 established reproducible local training, exact restart semantics, leakage controls, controlled memorization and failure-driven mixed-precision safeguards.",
+      "file": "articles/stark-m6-reproducible-training-infrastructure.md",
+      "tags": [
+        "M6",
+        "Training",
+        "Reproducibility",
+        "CUDA",
+        "Continual Learning"
+      ],
+      "download": "assets/research/papers/Stark_M6_Reproducible_Training_Infrastructure_Public.pdf"
+    },
+    {
+      "slug": "stark-founder-v0-first-neural-baseline",
+      "title": "Stark Founder V0: Building and Measuring the First Neural Baseline",
+      "date": "2026-09-07",
+      "category": "Research Report",
+      "status": "Accepted",
+      "summary": "From tokenizer through PRETRAIN-001 and M7: the 11.54M-parameter frozen language substrate that became the control for Stark memory and cognition research.",
+      "file": "articles/stark-founder-v0-first-neural-baseline.md",
+      "tags": [
+        "Founder V0",
+        "Pretraining",
+        "Evaluation",
+        "M0–M7"
+      ]
+    },
+    {
+      "slug": "stark-september-architecture-snapshot",
+      "title": "Stark Architecture Snapshot — September 2026",
+      "date": "2026-09-09",
+      "category": "Architecture",
+      "status": "Current",
+      "summary": "Founder V0 now coexists with SFM-1, exact factual evidence, SFM-T recall, and a typed Global Workspace memory boundary. M9 remains deliberately undesigned until the next research question is frozen.",
+      "file": "articles/stark-september-architecture-snapshot.md",
+      "tags": [
+        "Architecture",
+        "SFM-1",
+        "Memory",
+        "Global Workspace",
+        "Cells"
+      ]
+    },
+    {
+      "slug": "stark-native-digital-life-vision",
+      "title": "The Core Vision: Stark Native Digital Life",
+      "date": "2026-05-20",
+      "category": "Vision",
+      "status": "Active",
+      "summary": "The long-term goal remains a persistent digital being whose state, memory, learning and action survive beyond a single prompt window or model call.",
+      "file": "articles/stark-native-digital-life-vision.md",
+      "tags": [
+        "Vision",
+        "Digital Life",
+        "Continuity"
+      ]
+    }
+  ]
+}

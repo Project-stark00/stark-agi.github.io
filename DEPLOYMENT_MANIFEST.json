@@ -1,0 +1,273 @@
+{
+  "format": "stark-digital-static-deployment-manifest-v4",
+  "generated": "2026-09-09",
+  "milestone": "M8 complete; STARK Digital portfolio and crawlable research edition",
+  "file_count": 53,
+  "files": [
+    {
+      "path": "articles.html",
+      "bytes": 9277,
+      "sha256": "56f547a61e6dcb14e6617399a956bed28e7a59344ccf7b9ea2557d882f0975a9"
+    },
+    {
+      "path": "articles/stark-founder-v0-first-neural-baseline.md",
+      "bytes": 16889,
+      "sha256": "6c4ae099db3d3adb7b7cfba2df4223d2328117137b7c165df080a203a7279e50"
+    },
+    {
+      "path": "articles/stark-m6-reproducible-training-infrastructure.md",
+      "bytes": 8353,
+      "sha256": "55b7dbb99b5cb1aeddc41409de2e38fc6228c77cb42ecb9c57986ce0e1035859"
+    },
+    {
+      "path": "articles/stark-m8-native-semantic-fact-memory.md",
+      "bytes": 24557,
+      "sha256": "0a1ca375fc9f0d59f5eb5bd2f648c90b019e8f217c4d0410c80b0cc727e2ed8b"
+    },
+    {
+      "path": "articles/stark-native-digital-life-vision.md",
+      "bytes": 2352,
+      "sha256": "1367924d97ce6accaa82a1aa12601250fa02644a0c65243bc2e2273e57586793"
+    },
+    {
+      "path": "articles/stark-september-architecture-snapshot.md",
+      "bytes": 4278,
+      "sha256": "da8777734b8de1a603818a7f86046b3b67f6086b940a432f51fd218b5976c4e6"
+    },
+    {
+      "path": "assets/research/m8_architecture.png",
+      "bytes": 54520,
+      "sha256": "71b654412491386f0e3c92b843ef0d5088755fe55f355ff06006f50ed84dd1e2"
+    },
+    {
+      "path": "assets/research/m8_logprob_deltas.png",
+      "bytes": 68446,
+      "sha256": "9a6df8408092d2d748b4f786bf7ae7f053d216c2235996cbe353f70035867bfe"
+    },
+    {
+      "path": "assets/research/m8_regression_growth.png",
+      "bytes": 73196,
+      "sha256": "a246efb8084146239879685db8d3eb8b73c0d49b9ec20fb3520f6912633db00d"
+    },
+    {
+      "path": "assets/research/m8_utilization_rates.png",
+      "bytes": 58148,
+      "sha256": "8b385432b3df97a10f77a2cdc72f477247125514c279980244a46582047513e9"
+    },
+    {
+      "path": "assets/research/papers/Stark_M6_Reproducible_Training_Infrastructure_Public.pdf",
+      "bytes": 118912,
+      "sha256": "60dbec9843b0c0a868ffe96039e2e8c0b4267721ccac7e64daa4b84f94701a5b"
+    },
+    {
+      "path": "assets/research/papers/Stark_M8_Native_Semantic_Memory_Research_Paper_Public.pdf",
+      "bytes": 506950,
+      "sha256": "747d92ae322e8664fb0a25046bf6ad82f8f8826840ba390ee20a4b07f4efc1be"
+    },
+    {
+      "path": "assets/stark-mark.svg",
+      "bytes": 314,
+      "sha256": "974f267135b885adce2ef5a152fb4ced3292ba1910bec6c5b570ee81a8dc20f7"
+    },
+    {
+      "path": "css/style.css",
+      "bytes": 27900,
+      "sha256": "f0686403997c4d442d9a3baff25d6d72aae0e39f06f38d463886b25e603e6751"
+    },
+    {
+      "path": "data/articles.json",
+      "bytes": 3278,
+      "sha256": "948fe97d076c731e2d7150bfaa645bed43d05f8f80c92ba7de7d4cef5df4093a"
+    },
+    {
+      "path": "data/progress.json",
+      "bytes": 8440,
+      "sha256": "9fd167160c664aaa390854f13d2877533e03b73c62ee1cce191f1e8df15240d8"
+    },
+    {
+      "path": "index.html",
+      "bytes": 14362,
+      "sha256": "9d550c21cb27f2491699b65eddce0f76423ecdb76c12faa7e4ab4a46505101a0"
+    },
+    {
+      "path": "js/app.js",
+      "bytes": 1408,
+      "sha256": "b787b16509e3fedd4c419ad4b6e1801aeffc58aeb93cbcba1742b9330cc2e96f"
+    },
+    {
+      "path": "js/articles.js",
+      "bytes": 212,
+      "sha256": "c193a64d18d1c223315382fdb0741899d8d7816d1f630720e71c76fcb55f080a"
+    },
+    {
+      "path": "js/progress.js",
+      "bytes": 2223,
+      "sha256": "e7dadb7774e3632e2fa2309655040182db01e367a65f8899e22ec6c2013dcff1"
+    },
+    {
+      "path": "out/articles.html",
+      "bytes": 9277,
+      "sha256": "56f547a61e6dcb14e6617399a956bed28e7a59344ccf7b9ea2557d882f0975a9"
+    },
+    {
+      "path": "out/assets/research/m8_architecture.png",
+      "bytes": 54520,
+      "sha256": "71b654412491386f0e3c92b843ef0d5088755fe55f355ff06006f50ed84dd1e2"
+    },
+    {
+      "path": "out/assets/research/m8_logprob_deltas.png",
+      "bytes": 68446,
+      "sha256": "9a6df8408092d2d748b4f786bf7ae7f053d216c2235996cbe353f70035867bfe"
+    },
+    {
+      "path": "out/assets/research/m8_regression_growth.png",
+      "bytes": 73196,
+      "sha256": "a246efb8084146239879685db8d3eb8b73c0d49b9ec20fb3520f6912633db00d"
+    },
+    {
+      "path": "out/assets/research/m8_utilization_rates.png",
+      "bytes": 58148,
+      "sha256": "8b385432b3df97a10f77a2cdc72f477247125514c279980244a46582047513e9"
+    },
+    {
+      "path": "out/assets/research/papers/Stark_M6_Reproducible_Training_Infrastructure_Public.pdf",
+      "bytes": 118912,
+      "sha256": "60dbec9843b0c0a868ffe96039e2e8c0b4267721ccac7e64daa4b84f94701a5b"
+    },
+    {
+      "path": "out/assets/research/papers/Stark_M8_Native_Semantic_Memory_Research_Paper_Public.pdf",
+      "bytes": 506950,
+      "sha256": "747d92ae322e8664fb0a25046bf6ad82f8f8826840ba390ee20a4b07f4efc1be"
+    },
+    {
+      "path": "out/assets/stark-mark.svg",
+      "bytes": 314,
+      "sha256": "974f267135b885adce2ef5a152fb4ced3292ba1910bec6c5b570ee81a8dc20f7"
+    },
+    {
+      "path": "out/css/style.css",
+      "bytes": 27900,
+      "sha256": "f0686403997c4d442d9a3baff25d6d72aae0e39f06f38d463886b25e603e6751"
+    },
+    {
+      "path": "out/data/articles.json",
+      "bytes": 3278,
+      "sha256": "948fe97d076c731e2d7150bfaa645bed43d05f8f80c92ba7de7d4cef5df4093a"
+    },
+    {
+      "path": "out/data/progress.json",
+      "bytes": 8440,
+      "sha256": "9fd167160c664aaa390854f13d2877533e03b73c62ee1cce191f1e8df15240d8"
+    },
+    {
+      "path": "out/index.html",
+      "bytes": 14362,
+      "sha256": "9d550c21cb27f2491699b65eddce0f76423ecdb76c12faa7e4ab4a46505101a0"
+    },
+    {
+      "path": "out/js/app.js",
+      "bytes": 1408,
+      "sha256": "b787b16509e3fedd4c419ad4b6e1801aeffc58aeb93cbcba1742b9330cc2e96f"
+    },
+    {
+      "path": "out/js/articles.js",
+      "bytes": 212,
+      "sha256": "c193a64d18d1c223315382fdb0741899d8d7816d1f630720e71c76fcb55f080a"
+    },
+    {
+      "path": "out/js/progress.js",
+      "bytes": 2223,
+      "sha256": "e7dadb7774e3632e2fa2309655040182db01e367a65f8899e22ec6c2013dcff1"
+    },
+    {
+      "path": "out/progress.html",
+      "bytes": 6284,
+      "sha256": "12245fb090779870cad7875d9389c91f996cd590ea64989f5341f403bdddc113"
+    },
+    {
+      "path": "out/research/stark-founder-v0-first-neural-baseline.html",
+      "bytes": 28919,
+      "sha256": "6df1850f520deddcbd28f5aff36ad84904ef432cfbb0cff64e54864c12799999"
+    },
+    {
+      "path": "out/research/stark-m6-reproducible-training-infrastructure.html",
+      "bytes": 17063,
+      "sha256": "065e007c14a9b952708a1e7aff61f3adab62b1242830b3076968b63994a09203"
+    },
+    {
+      "path": "out/research/stark-m8-native-semantic-fact-memory.html",
+      "bytes": 40562,
+      "sha256": "f1b6840edd593ab375ad9b2a9ea13454bd75b9710cd2ed792900aa37ac44ac26"
+    },
+    {
+      "path": "out/research/stark-native-digital-life-vision.html",
+      "bytes": 9369,
+      "sha256": "c41454e65c0019c8d33aa3ffda2c195f6724cab999ddd83d0a5a58a8204b84a4"
+    },
+    {
+      "path": "out/research/stark-september-architecture-snapshot.html",
+      "bytes": 12080,
+      "sha256": "a60b3e34da6de02ee6794a2c5bb8428d6a2313e8b8c2a85ddf8834bd26f79f57"
+    },
+    {
+      "path": "out/robots.txt",
+      "bytes": 89,
+      "sha256": "547b3fdcf5fad57360901f5d51605457c4d4a8f16e7fd3235ef0a9697b086b3b"
+    },
+    {
+      "path": "out/sitemap.xml",
+      "bytes": 1626,
+      "sha256": "6b90829396e0ad87236aaad0bb348390bcc2169342efceb08038ced292404525"
+    },
+    {
+      "path": "progress.html",
+      "bytes": 6284,
+      "sha256": "12245fb090779870cad7875d9389c91f996cd590ea64989f5341f403bdddc113"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2695,
+      "sha256": "30e77812013482661cffd6b4f84580749d85335b619eb18601587cd5887afb79"
+    },
+    {
+      "path": "research/stark-founder-v0-first-neural-baseline.html",
+      "bytes": 28919,
+      "sha256": "6df1850f520deddcbd28f5aff36ad84904ef432cfbb0cff64e54864c12799999"
+    },
+    {
+      "path": "research/stark-m6-reproducible-training-infrastructure.html",
+      "bytes": 17063,
+      "sha256": "065e007c14a9b952708a1e7aff61f3adab62b1242830b3076968b63994a09203"
+    },
+    {
+      "path": "research/stark-m8-native-semantic-fact-memory.html",
+      "bytes": 40562,
+      "sha256": "f1b6840edd593ab375ad9b2a9ea13454bd75b9710cd2ed792900aa37ac44ac26"
+    },
+    {
+      "path": "research/stark-native-digital-life-vision.html",
+      "bytes": 9369,
+      "sha256": "c41454e65c0019c8d33aa3ffda2c195f6724cab999ddd83d0a5a58a8204b84a4"
+    },
+    {
+      "path": "research/stark-september-architecture-snapshot.html",
+      "bytes": 12080,
+      "sha256": "a60b3e34da6de02ee6794a2c5bb8428d6a2313e8b8c2a85ddf8834bd26f79f57"
+    },
+    {
+      "path": "robots.txt",
+      "bytes": 89,
+      "sha256": "547b3fdcf5fad57360901f5d51605457c4d4a8f16e7fd3235ef0a9697b086b3b"
+    },
+    {
+      "path": "sitemap.xml",
+      "bytes": 1626,
+      "sha256": "6b90829396e0ad87236aaad0bb348390bcc2169342efceb08038ced292404525"
+    },
+    {
+      "path": "STARK.md",
+      "bytes": 843,
+      "sha256": "a36285aefd03837888f26117fd42ad52fa2a671b372571516baed033b52b86c7"
+    }
+  ]
+}

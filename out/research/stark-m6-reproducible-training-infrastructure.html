@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0b0f">
+  <meta name="author" content="Jeremiah Wong Zhi Qi">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <title>Reproducible Local Training Infrastructure for Stark Founder V0 | STARK Digital</title>
+  <meta name="description" content="M6 established reproducible local training, exact restart semantics, leakage controls, controlled memorization and failure-driven mixed-precision safeguards.">
+  <link rel="canonical" href="https://project-stark00.github.io/stark-agi/research/stark-m6-reproducible-training-infrastructure.html">
+  <link rel="icon" href="../assets/stark-mark.svg" type="image/svg+xml">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="STARK Digital">
+  <meta property="og:title" content="Reproducible Local Training Infrastructure for Stark Founder V0">
+  <meta property="og:description" content="M6 established reproducible local training, exact restart semantics, leakage controls, controlled memorization and failure-driven mixed-precision safeguards.">
+  <meta property="og:url" content="https://project-stark00.github.io/stark-agi/research/stark-m6-reproducible-training-infrastructure.html">
+  <meta property="article:published_time" content="2026-09-09">
+  <meta property="article:author" content="Jeremiah Wong Zhi Qi">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Reproducible Local Training Infrastructure for Stark Founder V0">
+  <meta name="twitter:description" content="M6 established reproducible local training, exact restart semantics, leakage controls, controlled memorization and failure-driven mixed-precision safeguards.">
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","headline":"Reproducible Local Training Infrastructure for Stark Founder V0","description":"M6 established reproducible local training, exact restart semantics, leakage controls, controlled memorization and failure-driven mixed-precision safeguards.","datePublished":"2026-09-09","dateModified":"2026-09-09","author":{"@type":"Person","@id":"https://project-stark00.github.io/stark-agi/#jeremiah","name":"Jeremiah Wong Zhi Qi","url":"https://project-stark00.github.io/stark-agi/"},"publisher":{"@type":"Organization","@id":"https://project-stark00.github.io/stark-agi/#organization","name":"STARK Digital","url":"https://project-stark00.github.io/stark-agi/"},"mainEntityOfPage":"https://project-stark00.github.io/stark-agi/research/stark-m6-reproducible-training-infrastructure.html","isPartOf":{"@type":"WebSite","name":"STARK Digital","url":"https://project-stark00.github.io/stark-agi/"},"keywords":"M6, Training, Reproducibility, CUDA, Continual Learning","about":[{"@type":"Thing","name":"M6"},{"@type":"Thing","name":"Training"},{"@type":"Thing","name":"Reproducibility"},{"@type":"Thing","name":"CUDA"},{"@type":"Thing","name":"Continual Learning"}]}</script>
+</head>
+<body>
+  <a class="skip-link" href="#article-content">Skip to article</a>
+  <div class="page-grid" aria-hidden="true"></div>
+  <header class="site-header">
+    <nav class="nav shell" aria-label="Primary navigation">
+      <a class="brand" href="../index.html" aria-label="STARK Digital home"><span class="brand-mark">SD</span><span class="brand-wordmark">STARK <i>DIGITAL</i></span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Open navigation"><span></span><span></span></button>
+      <div class="nav-links" id="site-navigation"><a href="../articles.html" aria-current="page">Research</a><a href="../index.html#method">Method</a><a href="../progress.html">Progress</a><a href="../index.html#about">About</a><a class="nav-cta" href="https://github.com/Project-stark00/stark-agi" target="_blank" rel="noreferrer">View GitHub <span aria-hidden="true">↗</span></a></div>
+    </nav>
+  </header>
+
+  <main>
+    <header class="article-hero">
+      <div class="shell">
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../index.html">STARK Digital</a><span>/</span><a href="../articles.html">Research</a><span>/</span><span>R—02</span></nav>
+        <div class="article-hero-grid">
+          <div>
+            <p class="kicker">Technical Report · Accepted</p>
+            <h1>Reproducible Local Training Infrastructure for Stark Founder V0</h1>
+            <p class="article-deck">M6 established reproducible local training, exact restart semantics, leakage controls, controlled memorization and failure-driven mixed-precision safeguards.</p>
+          </div>
+          <aside class="article-byline" aria-label="Publication details">
+            <dl>
+              <div><dt>Author</dt><dd>Jeremiah Wong Zhi Qi</dd></div>
+              <div><dt>Published</dt><dd><time datetime="2026-09-09">Sep 09, 2026</time></dd></div>
+              <div><dt>Series</dt><dd>STARK Digital Research</dd></div>
+              <div><dt>Reference</dt><dd>R—02</dd></div>
+            </dl>
+            <a class="button primary" href="../assets/research/papers/Stark_M6_Reproducible_Training_Infrastructure_Public.pdf">Download public PDF <span aria-hidden="true">↓</span></a>
+          </aside>
+        </div>
+      </div>
+    </header>
+
+    <div class="article-layout shell">
+      <aside class="article-toc" aria-label="On this page"><span>On this page</span><ol><li class="toc-main"><a href="#m6-technical-research-report">M6 Technical Research Report</a></li><li class="toc-main"><a href="#abstract">Abstract</a></li><li class="toc-main"><a href="#1-scope">1. Scope</a></li><li class="toc-main"><a href="#2-data-pipeline">2. Data pipeline</a></li><li class="toc-main"><a href="#3-trainer">3. Trainer</a></li><li class="toc-main"><a href="#4-exact-restart-as-an-experimental-requirement">4. Exact restart as an experimental requirement</a></li><li class="toc-main"><a href="#5-true-overfit-correction">5. True-overfit correction</a></li><li class="toc-main"><a href="#6-rope-precision-transition-cache-failure">6. RoPE precision-transition cache failure</a></li><li class="toc-main"><a href="#7-continual-learning-boundary">7. Continual-learning boundary</a></li><li class="toc-main"><a href="#8-why-m6-deserves-a-separate-report">8. Why M6 deserves a separate report</a></li><li class="toc-main"><a href="#9-conclusion">9. Conclusion</a></li><li class="toc-main"><a href="#primary-project-evidence">Primary Project Evidence</a></li></ol></aside>
+      <article id="article-content" class="article-shell">
+        <div class="markdown-body"><h2 id="m6-technical-research-report">M6 Technical Research Report</h2>
+<p><strong>Project Stark Technical Research Report — Public Edition</strong> <strong>Date:</strong> 9 September 2026 <strong>Publication note:</strong> Internal paths, machine identifiers, artifact hashes, and operational filenames are intentionally omitted.</p>
+<h2 id="abstract">Abstract</h2>
+<p>M6 transformed the Stark Founder V0 architecture from a trainable language-model definition into a reproducible local training system. The milestone introduced source-aware token shards, exact and near-overlap leakage controls, deterministic packing, sequence-length curriculum, CUDA/BF16 training, atomic checkpointing, optimizer/scaler/RNG/data-stream restoration, finite-gradient safeguards, PAD invariants, and a fail-conservative continual-learning boundary. Operator testing exposed and corrected several defects, including a broken synthetic-stream RNG checkpoint path, a memorization gate that did not actually train on the probe sentence, and a RoPE cache that expanded exponentially across BF16/FP32 precision transitions. The corrected M6 system subsequently supported PRETRAIN-001 and the frozen Founder V0 baseline.</p>
+<p>M6 is the only M1-M6 construction milestone that warrants a separate technical research report. M1-M5 are conventional architectural assembly stages and are more coherently documented together in the Founder V0 architecture/baseline report.</p>
+<h2 id="1-scope">1. Scope</h2>
+<p>M6 added a reusable training engine around the frozen M5 Founder LM without changing M0-M5 parameter shapes or model architecture.</p>
+<p>The system had four principal goals:</p>
+<ol>
+<li>preserve dataset and tokenizer identity;</li>
+<li>produce deterministic and crash-resumable training trajectories;</li>
+<li>support the target local CUDA hardware safely;</li>
+<li>define a boundary between transient/episodic knowledge and slow parametric consolidation.</li>
+</ol>
+<h2 id="2-data-pipeline">2. Data pipeline</h2>
+<p>The M6 data system implemented:</p>
+<ul>
+<li>source-aware JSONL/text ingestion;</li>
+<li>frozen-tokenizer hash verification;</li>
+<li>BOS/EOS document boundaries;</li>
+<li>trusted user/assistant role insertion only when source metadata justified it;</li>
+<li>reserved control-token rejection;</li>
+<li>uint16 token shards and document indexes;</li>
+<li>SHA-256 manifests;</li>
+<li>exact within-split deduplication;</li>
+<li>cross-split exact leakage rejection;</li>
+<li>conservative token-sketch near-overlap filtering from evaluation against train/replay;</li>
+<li>deterministic weighted packing;</li>
+<li>long-document continuation across physical windows;</li>
+<li>exact stream checkpoint/resume.</li>
+</ul>
+<p>These controls are important because model reproducibility is not meaningful if data selection or stream position can drift silently after restart.</p>
+<h2 id="3-trainer">3. Trainer</h2>
+<p>The accepted trainer used AdamW, token-based warmup plus cosine decay, gradient clipping, microbatching and gradient accumulation, and a sequence curriculum:</p>
+<p><code>64 -&gt; 128 -&gt; 256 -&gt; 512 -&gt; 1024</code></p>
+<p>Precision policy supported FP32, FP16 with GradScaler, and BF16. The accepted local accelerator supported BF16 execution.</p>
+<p>M6 also implemented validation, early stopping, throughput/VRAM metrics, embedding/attention probes, generation probes, finite loss/gradient failure paths, and exact PAD protection.</p>
+<h2 id="4-exact-restart-as-an-experimental-requirement">4. Exact restart as an experimental requirement</h2>
+<p>The checkpoint boundary included:</p>
+<ul>
+<li>model Safetensors;</li>
+<li>optimizer state;</li>
+<li>AMP scaler state;</li>
+<li>CPU/CUDA RNG state;</li>
+<li>exact data-stream position;</li>
+<li>tokenizer and dataset identities.</li>
+</ul>
+<p>The corrected RNG checkpoint format serializes and verifies the full random-state payload before restoration, then performs a read-back check to confirm the restored accelerator RNG state.</p>
+<p>The M6 resume repairs were driven by operator-discovered defects rather than hidden post-hoc. The defects included incorrectly labeled checkpoint progress, reuse of live model/optimizer objects rather than a true restart boundary, a synthetic stream whose <code>state_dict()</code> called <code>seed()</code> instead of <code>getstate()</code>, and a Safetensors comparator that used the wrong loader. The corrected M6.2B equivalence experiment established bitwise trajectory preservation.</p>
+<h2 id="5-true-overfit-correction">5. True-overfit correction</h2>
+<p>The original memorization gate did not guarantee that its probe string was in the training data and stopped on a weak loss threshold. M6.2 was corrected to use a dedicated synthetic corpus containing a deliberately unique control sequence.</p>
+<p>The strong gate required deterministic evaluation loss below 0.25 and an exact greedy continuation match. Sampling remained diagnostic only. This changed the question from “does the loss become smaller?” to “can the training engine intentionally force the model to learn an exact controlled sequence?”</p>
+<h2 id="6-rope-precision-transition-cache-failure">6. RoPE precision-transition cache failure</h2>
+<p>A particularly useful M6 failure occurred during alternating BF16 training and FP32 generation probes. The RoPE cache treated a dtype mismatch as a reason for geometric growth, causing the local cache capacity to grow:</p>
+<p><code>1024 -&gt; 2048 -&gt; 4096 -&gt; ... -&gt; 524288</code></p>
+<p>Despite a physical model window of 1,024 tokens, the eight layers eventually accumulated approximately GiB-scale trigonometric cache storage and produced a CUDA OOM.</p>
+<p>The fix restricted geometric cache growth to genuine same-device/same-dtype sequence-length growth. A precision/device transition now rebuilds only at <code>max(required_positions, initial_cache_length)</code>. A regression test repeatedly alternates BF16/FP32 and requires cached positions to remain 1,024.</p>
+<p>This incident is important because it validates the project&#39;s bounded-context invariant under real mixed-precision execution, not only in static architecture review.</p>
+<h2 id="7-continual-learning-boundary">7. Continual-learning boundary</h2>
+<p>M6 did not equate every new experience with a gradient update. It defined a stability taxonomy and a conservative bridge in which dynamic and episodic information remain in fast/external memory, while only sufficiently stable and verified material can enter a slow weight-consolidation queue. A replay mixture is required to reduce catastrophic forgetting risk; the initial default replay ratio is 20%.</p>
+<p>This separation later became conceptually consistent with M8&#39;s stronger distinction between memory state, exact evidence, and consolidation.</p>
+<h2 id="8-why-m6-deserves-a-separate-report">8. Why M6 deserves a separate report</h2>
+<p>M1-M5 are essential engineering milestones but do not independently establish new empirical claims beyond correct construction of a conventional small Transformer substrate. M6, by contrast, produced several independently falsifiable systems results:</p>
+<ul>
+<li>reproducible local CUDA/BF16 training;</li>
+<li>exact checkpoint/resume semantics;</li>
+<li>controlled intentional memorization;</li>
+<li>real-data generalization infrastructure;</li>
+<li>dataset leakage controls;</li>
+<li>operator-discovered precision/cache failure and correction;</li>
+<li>a governed separation between fast memory and slow parametric consolidation.</li>
+</ul>
+<p>The successful PRETRAIN-001 run and M7 freeze depend directly on these guarantees.</p>
+<h2 id="9-conclusion">9. Conclusion</h2>
+<p>M6 should be treated as a technical infrastructure research milestone rather than just a trainer implementation. Its main contribution is not a novel optimizer or model block. It is the establishment of an auditable local experimental substrate in which interruption, precision transitions, dataset identity, RNG state, and later consolidation can be tested rather than assumed.</p>
+<p>For public documentation, M1-M5 remain best represented as a single architecture-construction sequence in the Founder V0 paper. M6 merits a standalone technical report because it carries reproducibility, failure-analysis, and continual-learning implications that persist across every later Stark experiment.</p>
+<h2 id="primary-project-evidence">Primary Project Evidence</h2>
+<p>The report is based on accepted M6 architecture, implementation, correction, and acceptance evidence, together with the later pretraining and Founder V0 baseline records that depended on those guarantees. The internal archive retains exact artifact identities, operational filenames, and machine-specific evidence; those details are intentionally omitted from this public edition.</p>
+<p>This document is a project technical report, not a claim of external peer review.</p></div>
+        <footer class="article-end">
+          <p>Continue through the STARK Digital research record</p>
+          <nav class="article-next" aria-label="Related research"><a href="stark-m8-native-semantic-fact-memory.html">Native Semantic Fact Memory for a Frozen Small Language Model <span aria-hidden="true">↗</span></a><a href="stark-founder-v0-first-neural-baseline.html">Stark Founder V0: Building and Measuring the First Neural Baseline <span aria-hidden="true">↗</span></a></nav>
+        </footer>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer"><div class="shell footer-grid"><div><a class="brand" href="../index.html"><span class="brand-mark">SD</span><span class="brand-wordmark">STARK <i>DIGITAL</i></span></a><p>Independent native digital life research by Jeremiah Wong Zhi Qi.</p></div><div class="footer-nav"><span>Explore</span><a href="../articles.html">Research</a><a href="../progress.html">Progress</a><a href="../index.html#about">About</a></div><div class="footer-nav"><span>External</span><a href="https://github.com/Project-stark00/stark-agi" target="_blank" rel="noreferrer">Repository ↗</a></div></div><div class="shell footer-base"><span>© 2026 Jeremiah Wong Zhi Qi</span><span>STARK Digital / Research in public</span></div></footer>
+  <script src="../js/app.js"></script>
+</body>
+</html>

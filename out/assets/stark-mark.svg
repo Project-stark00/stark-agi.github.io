@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">STARK Digital</title>
+  <rect width="64" height="64" rx="6" fill="#f4f5f6"/>
+  <path d="M16 17h32v7H24v5h20v18H16v-7h20v-5H16z" fill="#111318"/>
+  <path d="M48 17v30h-7V17z" fill="#2469e8"/>
+</svg>
