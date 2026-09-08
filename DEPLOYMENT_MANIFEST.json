@@ -2,12 +2,12 @@
   "format": "stark-digital-static-deployment-manifest-v4",
   "generated": "2026-09-09",
   "milestone": "M8 complete; STARK Digital portfolio and crawlable research edition",
-  "file_count": 53,
+  "file_count": 54,
   "files": [
     {
       "path": "articles.html",
-      "bytes": 9277,
-      "sha256": "56f547a61e6dcb14e6617399a956bed28e7a59344ccf7b9ea2557d882f0975a9"
+      "bytes": 9422,
+      "sha256": "9193edd2ee9d626d2f7929f2b5ccb83ce6fc0119d2642a75908001e9e0df1cfa"
     },
     {
       "path": "articles/stark-founder-v0-first-neural-baseline.md",
@@ -71,8 +71,8 @@
     },
     {
       "path": "css/style.css",
-      "bytes": 27900,
-      "sha256": "f0686403997c4d442d9a3baff25d6d72aae0e39f06f38d463886b25e603e6751"
+      "bytes": 43195,
+      "sha256": "fad2580dde8e6103138b1e39e91909f8aceb61ccfb85bb0f5b49bd707063a8b0"
     },
     {
       "path": "data/articles.json",
@@ -86,8 +86,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 14362,
-      "sha256": "9d550c21cb27f2491699b65eddce0f76423ecdb76c12faa7e4ab4a46505101a0"
+      "bytes": 16046,
+      "sha256": "45075b14392a06bbdb30e62a9c8e3d007220615b85ff608e17b6021d9eef4d9f"
     },
     {
       "path": "js/app.js",
@@ -98,6 +98,11 @@
       "path": "js/articles.js",
       "bytes": 212,
       "sha256": "c193a64d18d1c223315382fdb0741899d8d7816d1f630720e71c76fcb55f080a"
+    },
+    {
+      "path": "js/life.js",
+      "bytes": 4962,
+      "sha256": "e5de52f0141ebf1af5b0bb39aeb18c377f01264332144bc60ffa108c03d70af6"
     },
     {
       "path": "js/progress.js",
@@ -191,13 +196,13 @@
     },
     {
       "path": "out/research/stark-m6-reproducible-training-infrastructure.html",
-      "bytes": 17063,
-      "sha256": "065e007c14a9b952708a1e7aff61f3adab62b1242830b3076968b63994a09203"
+      "bytes": 17094,
+      "sha256": "288bd8b018de8a3d0baedcbed611fba1402ad57da36c08b5bd6a7996dfeff2db"
     },
     {
       "path": "out/research/stark-m8-native-semantic-fact-memory.html",
-      "bytes": 40562,
-      "sha256": "f1b6840edd593ab375ad9b2a9ea13454bd75b9710cd2ed792900aa37ac44ac26"
+      "bytes": 40602,
+      "sha256": "405de85c61dfdf83495fe0215bb69685a4f0ca87d33e4aadd31936a272da0ddb"
     },
     {
       "path": "out/research/stark-native-digital-life-vision.html",
@@ -221,8 +226,8 @@
     },
     {
       "path": "progress.html",
-      "bytes": 6284,
-      "sha256": "12245fb090779870cad7875d9389c91f996cd590ea64989f5341f403bdddc113"
+      "bytes": 6429,
+      "sha256": "89ead33dd6cdedd95e7f67e22a7a698c530da3825e3aa209585e517f35c1c849"
     },
     {
       "path": "README.md",
@@ -231,28 +236,28 @@
     },
     {
       "path": "research/stark-founder-v0-first-neural-baseline.html",
-      "bytes": 28919,
-      "sha256": "6df1850f520deddcbd28f5aff36ad84904ef432cfbb0cff64e54864c12799999"
+      "bytes": 29064,
+      "sha256": "95ab651cde80e34091f7e42b89b6b94f83b6527e405b769fe73315a025a654d2"
     },
     {
       "path": "research/stark-m6-reproducible-training-infrastructure.html",
-      "bytes": 17094,
-      "sha256": "288bd8b018de8a3d0baedcbed611fba1402ad57da36c08b5bd6a7996dfeff2db"
+      "bytes": 17239,
+      "sha256": "2ccfcc901cab53a51205c882e9f6e616c5722302931e765be686979454a28a56"
     },
     {
       "path": "research/stark-m8-native-semantic-fact-memory.html",
-      "bytes": 40602,
-      "sha256": "405de85c61dfdf83495fe0215bb69685a4f0ca87d33e4aadd31936a272da0ddb"
+      "bytes": 40747,
+      "sha256": "510e9c0e15063b9e8fb26c28c5a7403c95141568d4809f22d590849489f73d85"
     },
     {
       "path": "research/stark-native-digital-life-vision.html",
-      "bytes": 9369,
-      "sha256": "c41454e65c0019c8d33aa3ffda2c195f6724cab999ddd83d0a5a58a8204b84a4"
+      "bytes": 9514,
+      "sha256": "e40fec6b036a7c48f783942f6750ab3dcfb2031f6b10d12b9df8ccf0d35d7041"
     },
     {
       "path": "research/stark-september-architecture-snapshot.html",
-      "bytes": 12080,
-      "sha256": "a60b3e34da6de02ee6794a2c5bb8428d6a2313e8b8c2a85ddf8834bd26f79f57"
+      "bytes": 12225,
+      "sha256": "8cea4241b1f4396c76440af0d0ab3aed302c0ea16ef10c1280c788a9ead381de"
     },
     {
       "path": "robots.txt",
